@@ -43,7 +43,7 @@ $(TARGET): $(OBJFILES)
 	$(POSTCOMPILE)
 
 %$(INTER).o: %.cpp %$(INTER).d
-	@echo [CC] $<
+	@echo [CXX] $<
 	@$(CXX) $(DEPFLAGS) $(CXXFLAGS) -c $< -o $@
 	$(POSTCOMPILE)
 
