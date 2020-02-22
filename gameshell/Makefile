@@ -4,7 +4,7 @@ TARGET = sdlpal
 
 INTER=.unix
 
-HOST =
+HOST = arm-linux-gnueabihf-
 
 DEPFLAGS = -MT $@ -MMD -MP -MF $*$(INTER).Td
 
