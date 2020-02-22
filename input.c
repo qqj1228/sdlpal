@@ -84,27 +84,27 @@ static const int g_KeyMap[][2] = {
    { SDLK_RETURN,    kKeySearch },
    { SDLK_KP_ENTER,  kKeySearch },
    { SDLK_LCTRL,     kKeySearch },
+   { SDLK_PAGEUP,    kKeyPgUp },
    { SDLK_KP_9,      kKeyPgUp },
+   { SDLK_PAGEDOWN,  kKeyPgDn },
    { SDLK_KP_3,      kKeyPgDn },
+   { SDLK_HOME,      kKeyHome },
    { SDLK_KP_7,      kKeyHome },
+   { SDLK_END,       kKeyEnd },
    { SDLK_KP_1,      kKeyEnd },
    { SDLK_r,         kKeyRepeat },
 #ifdef GAMESHELL_KEYMAP
-   { SDLK_k,         kKeyMenu },      // B
-   { SDLK_j,         kKeySearch },    // A
-   { SDLK_PAGEUP,    kKeyAuto },      // LK2
-   { SDLK_END,       kKeyDefend },    // LK5
-   { SDLK_u,         kKeyUseItem },   // X
-   { SDLK_PAGEDOWN,  kKeyThrowItem }, // LK4
-   { SDLK_HOME,      kKeyFlee },      // LK1
+   { SDLK_j,         kKeyMenu },      // A of XBOX keymap
+   { SDLK_k,         kKeySearch },    // B of XBOX keymap
+   { SDLK_y,         kKeyAuto },      // LK2
+   { SDLK_l,         kKeyDefend },    // LK5
+   { SDLK_u,         kKeyUseItem },   // X of XBOX keymap
+   { SDLK_o,         kKeyThrowItem }, // LK4
+   { SDLK_h,         kKeyFlee },      // LK1
    { SDLK_SPACE,     kKeyForce },     // Select
-   { SDLK_i,         kKeyStatus }     // Y
+   { SDLK_i,         kKeyStatus }     // Y of XBOX keymap
 #else
    { SDLK_SPACE,     kKeySearch },
-   { SDLK_PAGEUP,    kKeyPgUp },
-   { SDLK_PAGEDOWN,  kKeyPgDn },
-   { SDLK_HOME,      kKeyHome },
-   { SDLK_END,       kKeyEnd },
    { SDLK_a,         kKeyAuto },
    { SDLK_d,         kKeyDefend },
    { SDLK_e,         kKeyUseItem },
