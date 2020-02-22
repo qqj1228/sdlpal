@@ -58,6 +58,8 @@
 # define PAL_HAS_NATIVEMIDI 1
 # define PAL_FILESYSTEM_IGNORE_CASE 1
 
+# define GAMESHELL_KEYMAP
+
 #include <sys/time.h>
 
 #if SDL_VERSION_ATLEAST(2,0,0)

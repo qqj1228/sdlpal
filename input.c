@@ -55,6 +55,18 @@ static void (*input_init_filter)() = _default_init_filter;
 static int (*input_event_filter)(const SDL_Event *, volatile PALINPUTSTATE *) = _default_input_event_filter;
 static void (*input_shutdown_filter)() = _default_input_shutdown_filter;
 
+/**
+ * kKeyMenu - 菜单
+ * kKeySearch - 探索/动作/对话
+ * kKeyRepeat - 重复
+ * kKeyAuto - 自动
+ * kKeyDefend - 防御
+ * kKeyUseItem - 使用
+ * kKeyThrowItem - 投掷
+ * kKeyFlee - 逃跑
+ * kKeyForce - 最强
+ * kKeyStatus - 状态
+*/
 static const int g_KeyMap[][2] = {
    { SDLK_UP,        kKeyUp },
    { SDLK_KP_8,      kKeyUp },
@@ -70,18 +82,29 @@ static const int g_KeyMap[][2] = {
    { SDLK_RALT,      kKeyMenu },
    { SDLK_KP_0,      kKeyMenu },
    { SDLK_RETURN,    kKeySearch },
-   { SDLK_SPACE,     kKeySearch },
    { SDLK_KP_ENTER,  kKeySearch },
    { SDLK_LCTRL,     kKeySearch },
-   { SDLK_PAGEUP,    kKeyPgUp },
    { SDLK_KP_9,      kKeyPgUp },
-   { SDLK_PAGEDOWN,  kKeyPgDn },
    { SDLK_KP_3,      kKeyPgDn },
-   { SDLK_HOME,      kKeyHome },
    { SDLK_KP_7,      kKeyHome },
-   { SDLK_END,       kKeyEnd },
    { SDLK_KP_1,      kKeyEnd },
    { SDLK_r,         kKeyRepeat },
+#ifdef GAMESHELL_KEYMAP
+   { SDLK_k,         kKeyMenu },      // B
+   { SDLK_j,         kKeySearch },    // A
+   { SDLK_PAGEUP,    kKeyAuto },      // LK2
+   { SDLK_END,       kKeyDefend },    // LK5
+   { SDLK_u,         kKeyUseItem },   // X
+   { SDLK_PAGEDOWN,  kKeyThrowItem }, // LK4
+   { SDLK_HOME,      kKeyFlee },      // LK1
+   { SDLK_SPACE,     kKeyForce },     // Select
+   { SDLK_i,         kKeyStatus }     // Y
+#else
+   { SDLK_SPACE,     kKeySearch },
+   { SDLK_PAGEUP,    kKeyPgUp },
+   { SDLK_PAGEDOWN,  kKeyPgDn },
+   { SDLK_HOME,      kKeyHome },
+   { SDLK_END,       kKeyEnd },
    { SDLK_a,         kKeyAuto },
    { SDLK_d,         kKeyDefend },
    { SDLK_e,         kKeyUseItem },
@@ -89,6 +112,7 @@ static const int g_KeyMap[][2] = {
    { SDLK_q,         kKeyFlee },
    { SDLK_f,         kKeyForce },
    { SDLK_s,         kKeyStatus }
+#endif
 };
 
 static VOID

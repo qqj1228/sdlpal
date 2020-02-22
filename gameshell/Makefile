@@ -1,10 +1,8 @@
-# General makefile for generic unix & linux platforms
-
 TARGET = sdlpal
 
 INTER=.unix
 
-HOST = arm-linux-gnueabihf-
+HOST =
 
 DEPFLAGS = -MT $@ -MMD -MP -MF $*$(INTER).Td
 
