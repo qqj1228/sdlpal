@@ -34,8 +34,8 @@
 #  define PAL_HAS_SDLCD         1
 # endif
 
-# define PAL_PREFIX            "./"
-# define PAL_SAVE_PREFIX       "./"
+# define PAL_PREFIX            "./data"
+# define PAL_SAVE_PREFIX       "./data"
 # define PAL_HAS_TOUCH         0
 # define PAL_DEFAULT_WINDOW_WIDTH   320
 # define PAL_DEFAULT_WINDOW_HEIGHT  200
